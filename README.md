@@ -26,6 +26,9 @@ Note : Other than nodejs installation, rest of the process is same in windows an
 6. [GET] : "/groups/query?" : Complex search query for a group with parameters.
 7. [GET] : "/users/query?" : Complex search query for a user with parameters.
 
+Success Status Code : 200
+Error Status Code : 404
+
 ## API Documentation:
 1. The tool used to document this API is "apidoc".
 2. "npm install apidoc -g" is the command to install it.
