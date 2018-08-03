@@ -1,13 +1,14 @@
-# BRAIN-APItest
-This project is to develop APIs for a user and groups data from local files.
+## BRAIN-APItest
+This project is to develop search APIs for a user and groups data from local files.
 
-1. Language : Node.js (link : https://nodejs.org/en/download/)
+1. Language : Node.js 
 2. Type     : REST API http protocol
 3. Test tool : POSTMAN
 
 Installations Required : Node.js and npm.
+link : https://nodejs.org/en/download/
 
-## The APIs Covered :
+### The APIs Covered :
 1. [GET] : "/users" : Responses the list of all the users.
 2. [GET] : "/users/:id" : Responses the user with the specified "id";
 3. [GET] : "/users/:id/groups" : Responses the list of all the groups that particular user is associated with.
