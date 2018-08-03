@@ -12,8 +12,10 @@ Instructions to run :
 1. Download and install node.js and npm.
 2. Clone or download this repository zip file.
 3. Extract this repository in a directory where node.js is installed.
-4. In the main directory, run the following command : "node brain.js";
+4. In the main directory, run the following command : "node brain.js" from the command line;
 5. The APIs could then be tested in the browser or in the POSTMAN tool.
+
+Note : Other than nodejs installation, rest of the process is same in windows and linux environments.
 
 ### The APIs Covered :
 1. [GET] : "/users" : Responses the list of all the users.
