@@ -8,13 +8,13 @@ This project is to develop APIs for a user and groups data from local files.
 Installations Required : Node.js and npm.
 
 ## The APIs Covered :
-1. [GET]
-2. [GET]
-3. [GET]
-4. [GET]
-5. [GET]
-6. [GET]
-7. [GET]
+1. [GET] : "/users" : Responses the list of all the users.
+2. [GET] : "/users/:id" : Responses the user with the specified "id";
+3. [GET] : "/users/:id/groups" : Responses the list of all the groups that particular user is associated with.
+4. [GET] : "/groups" : Responses the list all the groups.
+5. [GET] : "/groups/:id" : Responses the particular group with the specified "id".
+6. [GET] : "/groups/query?" : Complex search query for a group with parameters.
+7. [GET] : "/users/query?" : Complex search query for a user with parameters.
 
 Status : Pending . . .
 
