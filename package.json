@@ -1,0 +1,28 @@
+{
+  "name": "brain",
+  "version": "1.0.0",
+  "description": "brain api test",
+  "main": "brain.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "node brain.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaushik-ponugoti/BRAIN-APItest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaushik-ponugoti/BRAIN-APItest/issues"
+  },
+  "homepage": "https://github.com/kaushik-ponugoti/BRAIN-APItest#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "is-subset": "^0.1.1",
+    "node-linq": "0.0.5",
+    "underscore": "^1.9.1"
+  }
+}
