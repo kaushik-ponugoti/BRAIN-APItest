@@ -8,7 +8,7 @@ This project is to develop search APIs for a user and groups data from local fil
 Installations Required : Node.js and npm.
 link : https://nodejs.org/en/download/
 
-### Instructions to run :
+## Instructions to run :
 1. Download and install node.js and npm.
 2. Clone or download this repository zip file.
 3. Extract this repository in a directory where node.js is installed.
@@ -17,7 +17,7 @@ link : https://nodejs.org/en/download/
 
 Note : Other than nodejs installation, rest of the process is same in windows and linux environments.
 
-### The APIs Covered :
+## The APIs Covered :
 1. [GET] : "/users" : Responses the list of all the users.
 2. [GET] : "/users/:id" : Responses the user with the specified "id";
 3. [GET] : "/users/:id/groups" : Responses the list of all the groups that particular user is associated with.
@@ -33,3 +33,8 @@ Error Status Code : 404
 1. The tool used to document this API is "apidoc".
 2. "npm install apidoc -g" is the command to install it.
 3. After running the node server, in the file explorer, open "./doc/index.html" to go through the document.
+
+## Security:
+1. The service could be installed with an SSL certificate to implement HTTPS protocol.
+2. The headers of the service could consist of meta data such as a unique ID and a TOKEN for additional layer security.
+3. Session controlling could also add up to the security.
