@@ -14,9 +14,6 @@ AIM : To develop search API service for user and groups data from local files.
 6. [GET] : "/groups/query?" : Complex search query for a group with parameters.
 7. [GET] : "/users/query?" : Complex search query for a user with parameters.
 
->> Success Status Code : 200
->> Error Status Code : 404
-
 ## API Documentation:
 1. The plugin used to document this API is "apidoc".
 2. "npm install apidoc -g" is the command to install it.
@@ -40,3 +37,7 @@ Note : All of the above instructions are related to Windows OS.
 1. The service could be installed with an SSL certificate to implement HTTPS protocol.
 2. The headers of the service could consist of meta data such as a unique ID and a TOKEN for additional layer security.
 3. Session controlling from node.js could also add up to the security.
+
+## Error Codes:
+1. Success Status Code : 200
+2. Error Status Code : 404
