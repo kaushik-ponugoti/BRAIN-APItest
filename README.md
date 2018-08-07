@@ -8,7 +8,7 @@ This project is to develop search APIs for a user and groups data from local fil
 Installations Required : Node.js and npm.
 link : https://nodejs.org/en/download/
 
-Instructions to run :
+### Instructions to run :
 1. Download and install node.js and npm.
 2. Clone or download this repository zip file.
 3. Extract this repository in a directory where node.js is installed.
