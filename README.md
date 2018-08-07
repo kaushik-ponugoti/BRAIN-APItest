@@ -14,8 +14,8 @@ AIM : To develop search API service for user and groups data from local files.
 6. [GET] : "/groups/query?" : Complex search query for a group with parameters.
 7. [GET] : "/users/query?" : Complex search query for a user with parameters.
 
-Success Status Code : 200
-Error Status Code : 404
+>> Success Status Code : 200
+>> Error Status Code : 404
 
 ## API Documentation:
 1. The plugin used to document this API is "apidoc".
@@ -23,7 +23,7 @@ Error Status Code : 404
 3. After running the node server, in the file explorer, open "./doc/index.html" to go through the document.
 
 ## Installations Required : 
-1.Node.js and npm. (Ref : https://nodejs.org/en/download/)
+1. Node.js and npm. (Ref : https://nodejs.org/en/download/)
 2. POSTMAN testing tool. (optional) (Ref : https://www.getpostman.com/apps)
 3. Microsoft Visual Studio Code editor. (optional) (Ref : https://code.visualstudio.com/download)
 
