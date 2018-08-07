@@ -33,7 +33,3 @@ Error Status Code : 404
 1. The tool used to document this API is "apidoc".
 2. "npm install apidoc -g" is the command to install it.
 3. After running the node server, in the file explorer, open "./doc/index.html" to go through the document.
-
-Status : Pending . . .
-
-
