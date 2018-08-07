@@ -1,0 +1,1194 @@
+{
+	"info": {
+		"name": "brain-corp-api",
+		"_postman_id": "7055c7aa-2762-ee5f-f5a6-ffac880c2eaf",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "84fbbb8b-5f67-471a-8d19-caafbc36d766",
+					"name": "localhost:8000/users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "413",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:29:04 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19d-59SRjmF+7aItrAOtFML11ckLpDY\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 86,
+					"body": "[{\"name\":\"root\",\"uid\":0,\"gid\":0,\"comment\":\"root\",\"home\":\"/root\",\"shell\":\"/bin/bash\"},{\"name\":\"dwoodlins\",\"uid\":1001,\"gid\":1001,\"comment\":\"\",\"home\":\"/home\",\"shell\":\"/bin\"},{\"name\":\"tom\",\"uid\":1002,\"gid\":1002,\"comment\":\"\",\"home\":\"/home\",\"shell\":\"/bin\"},{\"name\":\"brian\",\"uid\":1003,\"gid\":1003,\"comment\":\"\",\"home\":\"/home\",\"shell\":\"/bin\"},{\"name\":\"kay\",\"uid\":1004,\"gid\":1004,\"comment\":\"\",\"home\":\"/home\",\"shell\":\"/bin\"}]"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/users/1003",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  "
+				},
+				"url": {
+					"raw": "localhost:8000/users/1003",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"1003"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "d9c40c6e-49e2-458c-877e-b444399f0894",
+					"name": "localhost:8000/users/1003",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  "
+						},
+						"url": {
+							"raw": "localhost:8000/users/1003",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"1003"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:30:35 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"51-BfQctg5nE/FpQa7mMHABV3DM/3s\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 29,
+					"body": "{\"name\":\"brian\",\"uid\":1003,\"gid\":1003,\"comment\":\"\",\"home\":\"/home\",\"shell\":\"/bin\"}"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/users/10044",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  "
+				},
+				"url": {
+					"raw": "localhost:8000/users/10044",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"10044"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "28e99620-f05c-4e86-92cd-5438091d9406",
+					"name": "localhost:8000/users/10044",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  "
+						},
+						"url": {
+							"raw": "localhost:8000/users/10044",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"10044"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:30:45 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a-yYj6UpUslYYy4rtt218upJpj9rs\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 39,
+					"body": "Not Found."
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/users/1001/groups",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  "
+				},
+				"url": {
+					"raw": "localhost:8000/users/1001/groups",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"1001",
+						"groups"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "c9058e6d-9ab5-4c40-88bd-7ecad65d5a14",
+					"name": "localhost:8000/users/1001/groups",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  "
+						},
+						"url": {
+							"raw": "localhost:8000/users/1001/groups",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"1001",
+								"groups"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:30:51 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-FJ3eAzTSkbdszVeDYl6LKNG7ytI\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 56,
+					"body": "[{\"name\":\"_analyticsusers\",\"gid\":250,\"members\":[\"dwoodlins\",\"tom\"]}]"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/users/10201/groups",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  "
+				},
+				"url": {
+					"raw": "localhost:8000/users/10201/groups",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"10201",
+						"groups"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "888b7d37-e03a-4caf-9522-27626556a555",
+					"name": "localhost:8000/users/10201/groups",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  "
+						},
+						"url": {
+							"raw": "localhost:8000/users/10201/groups",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"10201",
+								"groups"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:30:58 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a-yYj6UpUslYYy4rtt218upJpj9rs\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 37,
+					"body": "Not Found."
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/users/query?name=docker&gid=10002",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/users/query?name=docker&gid=10002",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"query"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "docker",
+							"equals": true
+						},
+						{
+							"key": "gid",
+							"value": "10002",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "d749dfc0-4c5a-4982-b1ea-dbd0b7c96869",
+					"name": "localhost:8000/users/query?name=docker&gid=10002",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/users/query?name=docker&gid=10002",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"query"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "docker",
+									"equals": true
+								},
+								{
+									"key": "gid",
+									"value": "10002",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:31:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a-yYj6UpUslYYy4rtt218upJpj9rs\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 39,
+					"body": "Not Found."
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/users/query?name=tom",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/users/query?name=tom",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"query"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "tom",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "5c904d4a-ae17-4691-8090-c486dd414f2f",
+					"name": "localhost:8000/users/query?name=tom",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/users/query?name=tom",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"query"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "tom",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:31:15 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f-kxeo5b6mrLdqmc6PzWASyp88GHs\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 37,
+					"body": "{\"name\":\"tom\",\"uid\":1002,\"gid\":1002,\"comment\":\"\",\"home\":\"/home\",\"shell\":\"/bin\"}"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/groups",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"groups"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "76fa173f-5533-416e-9d37-4d509dc1fa5e",
+					"name": "localhost:8000/groups",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/groups",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"groups"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "216",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:31:23 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d8-E5RYCI3jCeaLyWuJyNThABlB0bw\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 35,
+					"body": "[{\"name\":\"_analyticsusers\",\"gid\":250,\"members\":[\"dwoodlins\",\"tom\"]},{\"name\":\"docker\",\"gid\":1002,\"members\":[\"brian\",\"kay\",\"tom\"]},{\"name\":\"node\",\"gid\":1003,\"members\":[\"brian\"]},{\"name\":\"test\",\"gid\":1004,\"members\":[]}]"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/groups/250",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/groups/250",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"groups",
+						"250"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "46458fe3-eaeb-457d-8841-a41f7cdd6625",
+					"name": "localhost:8000/groups/250",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/groups/250",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"groups",
+								"250"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:31:28 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-8MYP0h/qRpM9pXLDGnUZzVJLyDc\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 28,
+					"body": "{\"name\":\"_analyticsusers\",\"gid\":250,\"members\":[\"dwoodlins\",\"tom\"]}"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/groups/2502",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/groups/2502",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"groups",
+						"2502"
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "d025c6a0-a5ab-42ad-94f0-b3be532cfc47",
+					"name": "localhost:8000/groups/2502",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/groups/2502",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"groups",
+								"2502"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:31:51 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a-yYj6UpUslYYy4rtt218upJpj9rs\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 34,
+					"body": "Not Found."
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/groups/query?name=docker&gid=1002",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/groups/query?name=docker&gid=1002",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"groups",
+						"query"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "docker",
+							"equals": true
+						},
+						{
+							"key": "gid",
+							"value": "1002",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "819cd42d-25db-464c-b017-29a6dc154da3",
+					"name": "localhost:8000/groups/query?name=docker&gid=1002",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/groups/query?name=docker&gid=1002",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"groups",
+								"query"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "docker",
+									"equals": true
+								},
+								{
+									"key": "gid",
+									"value": "1002",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:31:55 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-UEgW6UjntbsUgq5Nj9abCFI7fVs\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 21,
+					"body": "{\"name\":\"docker\",\"gid\":1002,\"members\":[\"brian\",\"kay\",\"tom\"]}"
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/groups/query?name=tom",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8000/groups/query?name=tom",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"groups",
+						"query"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "tom",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "26107c51-0592-48b8-a259-880a8cb7c8c9",
+					"name": "localhost:8000/groups/query?name=tom",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8000/groups/query?name=tom",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"groups",
+								"query"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "tom",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Aug 2018 19:32:00 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a-yYj6UpUslYYy4rtt218upJpj9rs\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 16,
+					"body": "Not Found."
+				}
+			]
+		}
+	]
+}
