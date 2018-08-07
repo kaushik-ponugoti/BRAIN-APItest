@@ -1,0 +1,42 @@
+[
+    {
+        "name": "root", 
+        "uid": 0, 
+        "gid": 0, 
+        "comment": "root", 
+        "home": "/root",
+        "shell": "/bin/bash"
+    },
+    {
+        "name": "dwoodlins", 
+        "uid": 1001, 
+        "gid": 1001, 
+        "comment": "", 
+        "home": "/home", 
+        "shell": "/bin"
+    },
+    {
+        "name": "tom", 
+        "uid": 1002, 
+        "gid": 1002, 
+        "comment": "", 
+        "home": "/home", 
+        "shell": "/bin"
+    },
+    {
+        "name": "brian", 
+        "uid": 1003, 
+        "gid": 1003, 
+        "comment": "", 
+        "home": "/home", 
+        "shell": "/bin"
+    },
+    {
+        "name": "kay", 
+        "uid": 1004, 
+        "gid": 1004, 
+        "comment": "", 
+        "home": "/home", 
+        "shell": "/bin"
+    }
+]

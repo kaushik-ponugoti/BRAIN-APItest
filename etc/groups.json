@@ -1,0 +1,28 @@
+[
+    {
+        "name": "_analyticsusers", 
+        "gid": 250, 
+        "members":[
+              "dwoodlins","tom"
+        ]
+    },
+    {
+        "name": "docker", 
+        "gid": 1002, 
+        "members": [
+              "brian","kay","tom"
+        ]
+    },
+    {
+        "name": "node", 
+        "gid": 1003, 
+        "members": [
+              "brian"
+        ]
+    },
+    {
+        "name": "test", 
+        "gid": 1004, 
+        "members": []
+    }
+]
