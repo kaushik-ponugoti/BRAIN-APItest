@@ -2,7 +2,12 @@ var express    = require('express');
 var bodyParser = require('body-parser');
 var fs         = require('fs');
 var isSubset   = require('is-subset');
+var path       = require('path');
 var app        = express();
+
+//file structure
+const GROUPS   = path.join(__dirname, './etc/groups.json');
+const USERS    = path.join(__dirname, './etc/passwd.json');
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -48,8 +53,11 @@ app.get('/groups/query', function(req,res){
     }
 
     // read the file related to the API
-    fs.readFile('./etc/groups.json', 'utf8', function (err, data) {
-      if (err) throw err;
+    fs.readFile(GROUPS, 'utf8', function (err, data) {
+      if (err){
+        res.send("FILE NOT FOUND");
+        throw err;
+      } 
       obj = JSON.parse(data);
       
       // If empty query, return all the data
@@ -115,8 +123,11 @@ app.get('/users/query', function(req,res){
     }
 
     // read the file related to the API
-    fs.readFile('./etc/passwd.json', 'utf8', function (err, data) {
-      if (err) throw err;
+    fs.readFile(USERS, 'utf8', function (err, data) {
+      if (err){
+        res.send("FILE NOT FOUND");
+        throw err;
+      } 
       obj = JSON.parse(data);
 
       // If empty query, return all the data
@@ -195,8 +206,11 @@ app.get('/users', function(req,res){
     var obj;
 
     // read the file related to the API
-    fs.readFile('./etc/passwd.json', 'utf8', function (err, data) {
-      if (err) throw err;
+    fs.readFile(USERS, 'utf8', function (err, data) {
+      if (err){
+        res.send("FILE NOT FOUND");
+        throw err;
+      } 
       obj = JSON.parse(data);
       res.send(obj);
     });
@@ -246,8 +260,11 @@ app.get('/groups', function(req,res){
     var obj;
 
     // read the file related to the API
-    fs.readFile('./etc/groups.json', 'utf8', function (err, data) {
-      if (err) throw err;
+    fs.readFile(GROUPS, 'utf8', function (err, data) {
+      if (err){
+        res.send("FILE NOT FOUND");
+        throw err;
+      } 
       obj = JSON.parse(data);
       res.send(obj);
     });
@@ -275,8 +292,11 @@ app.get('/users/:id', function(req,res){
     var obj;
 
     // read the file related to the API
-    fs.readFile('./etc/passwd.json', 'utf8', function (err, data) {
-        if (err) throw err;
+    fs.readFile(USERS, 'utf8', function (err, data) {
+        if (err){
+            res.send("FILE NOT FOUND");
+            throw err;
+        } 
         obj = JSON.parse(data);
 
         for(var i = 0; i < obj.length; i++){
@@ -321,8 +341,11 @@ app.get('/users/:id/groups', function(req,res){
     var final   = [];
 
     // read the file related to the API
-    fs.readFile('./etc/passwd.json', 'utf8', function (err, data) {
-        if (err) throw err;
+    fs.readFile(USERS, 'utf8', function (err, data) {
+        if (err){
+            res.send("FILE NOT FOUND");
+            throw err;
+        } 
         obj_users = JSON.parse(data);
     
         for(var i = 0; i < obj_users.length; i++){
@@ -331,8 +354,11 @@ app.get('/users/:id/groups', function(req,res){
             }
         }
         
-        fs.readFile('./etc/groups.json', 'utf8', function (err, data) {
-            if (err) throw err;
+        fs.readFile(GROUPS, 'utf8', function (err, data) {
+            if (err){
+                res.send("FILE NOT FOUND");
+                throw err;
+            } 
             obj_groups = JSON.parse(data);
 
             for(var i = 0; i < obj_groups.length; i++){
@@ -381,8 +407,11 @@ app.get('/groups/:id', function(req,res){
     var obj;
 
     // read the file related to the API
-    fs.readFile('./etc/groups.json', 'utf8', function (err, data) {
-      if (err) throw err;
+    fs.readFile(GROUPS, 'utf8', function (err, data) {
+      if (err){
+        res.send("FILE NOT FOUND");
+        throw err;
+      } 
       obj = JSON.parse(data);
       
       for(var i = 0; i < obj.length; i++){
