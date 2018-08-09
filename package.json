@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kaushik-ponugoti/BRAIN-APItest#readme",
   "dependencies": {
+    "csv-parse": "^2.5.0",
     "express": "^4.16.3",
     "is-subset": "^0.1.1",
     "node-linq": "0.0.5",

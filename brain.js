@@ -3,11 +3,51 @@ var bodyParser = require('body-parser');
 var fs         = require('fs');
 var isSubset   = require('is-subset');
 var path       = require('path');
+var parse      = require('csv-parse');
 var app        = express();
 
 //file structure
-const GROUPS   = path.join(__dirname, './etc/groups.json');
-const USERS    = path.join(__dirname, './etc/passwd.json');
+// const GROUPS   = path.join(__dirname, './C:/Windows/System32/drivers/etc/group');
+const GROUPS   = path.join(__dirname, './group');
+const USERS    = path.join(__dirname, './passwd');
+
+var obj_user  = [];
+var obj_group = [];
+
+// read the User related File to JSON
+var parser = parse({delimiter: ':'}, function (err, data) {
+    data.forEach(function(line) {
+        
+        var obj_ = { "name"     : line[0],
+                    "password" : line[1],
+                    "uid"      : line[2],
+                    "gid"      : line[3],
+                    "comment"  : line[4],
+                    "home"     : line[5],
+                    "shell"    : line[6]
+                   };
+        obj_user.push(obj_);
+    });    
+});
+    
+// read the inputFile, feed the contents to the parser
+fs.createReadStream(USERS).pipe(parser);
+
+// read the Group related file to JSON
+var parser = parse({delimiter: ':'}, function (err, data) {
+    data.forEach(function(line) {
+        
+      var obj_ = { "name"        : line[0],
+                   "password" : line[1],
+                   "gid"      : line[2],
+                   "members"  : line[3] 
+                 };
+        obj_group.push(obj_);
+    });    
+});
+ 
+// read the inputFile, feed the contents to the parser
+fs.createReadStream(GROUPS).pipe(parser);
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -38,7 +78,6 @@ console.log('api server running at port 8000');
     }
 	*/
 app.get('/groups/query', function(req,res){
-    var obj, query_;
     var query_object = {};
 
     console.log("Query Parameters :" + JSON.stringify(req.query));
@@ -48,36 +87,23 @@ app.get('/groups/query', function(req,res){
         query_object[q_obj] = req.query[q_obj];
     }
 
-    if(query_object.hasOwnProperty('gid')){
-        query_object['gid'] = parseInt(query_object['gid']); 
+    // If empty query, return all the data
+    if(Object.keys(query_object).length == 0){
+        res.send(obj_group);
+        return;
     }
-
-    // read the file related to the API
-    fs.readFile(GROUPS, 'utf8', function (err, data) {
-      if (err){
-        res.send("FILE NOT FOUND");
-        throw err;
-      } 
-      obj = JSON.parse(data);
-      
-      // If empty query, return all the data
-      if(Object.keys(query_object).length == 0){
-          res.send(obj);
-          return;
-      }
-      
-      //Checking if the query parameters match any of the data
-      for(var i = 0; i < obj.length ; i++){
-        if(isSubset(obj[i],query_object) == true){
-            res.send(obj[i]);
-            return;
-        }
-      }
-      
-      // If no matching data, return 404
-      res.status(404);
-      res.send('Not Found.');
-    });
+    
+    //Checking if the query parameters match any of the data
+    for(var i = 0; i < obj_group.length ; i++){
+    if(isSubset(obj_group[i],query_object) == true){
+        res.send(obj_group[i]);
+        return;
+    }
+    }
+    
+    // If no matching data, return 404
+    res.status(404);
+    res.send('Not Found.');
 });
 
 // GET /users/query
@@ -105,7 +131,6 @@ app.get('/groups/query', function(req,res){
     ]
 	*/
 app.get('/users/query', function(req,res){
-    var obj;
     var query_object = {};
 
     console.log("Query Parameters :" + JSON.stringify(req.query));
@@ -115,39 +140,23 @@ app.get('/users/query', function(req,res){
         query_object[q_obj] = req.query[q_obj];
     }
 
-    if(query_object.hasOwnProperty('uid')){
-        query_object['uid'] = parseInt(query_object['uid']); 
+    // If empty query, return all the data
+    if(Object.keys(query_object).length == 0){
+    res.send(obj_user);
+    return;
     }
-    if(query_object.hasOwnProperty('gid')){
-        query_object['gid'] = parseInt(query_object['gid']); 
+    
+    //Checking if the query parameters match any of the data
+    for(var i = 0; i < obj_user.length ; i++){
+        if(isSubset(obj_user[i],query_object) == true){
+            res.send(obj_user[i]);
+            return;
+        }
     }
 
-    // read the file related to the API
-    fs.readFile(USERS, 'utf8', function (err, data) {
-      if (err){
-        res.send("FILE NOT FOUND");
-        throw err;
-      } 
-      obj = JSON.parse(data);
-
-      // If empty query, return all the data
-      if(Object.keys(query_object).length == 0){
-        res.send(obj);
-        return;
-      }
-      
-      //Checking if the query parameters match any of the data
-      for(var i = 0; i < obj.length ; i++){
-          if(isSubset(obj[i],query_object) == true){
-              res.send(obj[i]);
-              return;
-          }
-      }
-
-      // If no matching data, return 404
-      res.status(404);
-      res.send('Not Found.');
-    });
+    // If no matching data, return 404
+    res.status(404);
+    res.send('Not Found.');
 });
 
 
@@ -203,17 +212,7 @@ app.get('/users/query', function(req,res){
     ]
 	*/
 app.get('/users', function(req,res){
-    var obj;
-
-    // read the file related to the API
-    fs.readFile(USERS, 'utf8', function (err, data) {
-      if (err){
-        res.send("FILE NOT FOUND");
-        throw err;
-      } 
-      obj = JSON.parse(data);
-      res.send(obj);
-    });
+    res.send(obj_user);
 });
 
 // GET /groups
@@ -257,17 +256,7 @@ app.get('/users', function(req,res){
     ]
 	*/
 app.get('/groups', function(req,res){
-    var obj;
-
-    // read the file related to the API
-    fs.readFile(GROUPS, 'utf8', function (err, data) {
-      if (err){
-        res.send("FILE NOT FOUND");
-        throw err;
-      } 
-      obj = JSON.parse(data);
-      res.send(obj);
-    });
+    res.send(obj_group);
 });
 
 // GET /users/uid
@@ -289,28 +278,16 @@ app.get('/groups', function(req,res){
     }
 	*/
 app.get('/users/:id', function(req,res){
-    var obj;
-
-    // read the file related to the API
-    fs.readFile(USERS, 'utf8', function (err, data) {
-        if (err){
-            res.send("FILE NOT FOUND");
-            throw err;
-        } 
-        obj = JSON.parse(data);
-
-        for(var i = 0; i < obj.length; i++){
-            if(JSON.stringify(obj[i].uid) == req.params.id){
-                res.send(obj[i]);
-                return;
-            }
+    for(var i = 0; i < obj_user.length; i++){
+        if((obj_user[i].uid) == req.params.id){
+            res.send(obj_user[i]);
+            return;
         }
+    }
 
-        // If no matching data, return 404
-        res.status(404);
-        res.send('Not Found.');
-    });
-    
+    // If no matching data, return 404
+    res.status(404);
+    res.send('Not Found.');
 });
 
 // GET /users/uid/groups
@@ -334,55 +311,31 @@ app.get('/users/:id', function(req,res){
     ]
 	*/
 app.get('/users/:id/groups', function(req,res){
-    var obj_users;
-    var obj_groups;
-    var obj_name;
+
+    var obj_gid;
     var gid_arr = [];
-    var final   = [];
-
-    // read the file related to the API
-    fs.readFile(USERS, 'utf8', function (err, data) {
-        if (err){
-            res.send("FILE NOT FOUND");
-            throw err;
-        } 
-        obj_users = JSON.parse(data);
     
-        for(var i = 0; i < obj_users.length; i++){
-            if(JSON.stringify(obj_users[i].uid) == req.params.id){
-                obj_name = JSON.stringify(obj_users[i].name);
-            }
+    for(var i = 0; i < obj_user.length; i++){
+        if((obj_user[i].uid) == req.params.id){
+            obj_gid = (obj_user[i].gid);
         }
-        
-        fs.readFile(GROUPS, 'utf8', function (err, data) {
-            if (err){
-                res.send("FILE NOT FOUND");
-                throw err;
-            } 
-            obj_groups = JSON.parse(data);
+    }
 
-            for(var i = 0; i < obj_groups.length; i++){
-                for(var j = 0; j < obj_groups[i].members.length; j ++){
-                    if(JSON.stringify(obj_groups[i].members[j]) == obj_name){
-                        gid_arr.push(obj_groups[i].gid);
-                    }
-                }
-            }
-            for(key in gid_arr){
-                for(var k = 0; k < obj_groups.length; k++){
-                    if(JSON.stringify(obj_groups[k].gid) == gid_arr[key]){
-                       final.push(obj_groups[k]);
-                       res.send(final);
-                       return;
-                    }
-                }
-            }  
+    for(var i = 0; i < obj_group.length; i++){
+        if((obj_group[i].gid) == obj_gid){
+            gid_arr.push(obj_group[i]);
+        }
+    }
+    
+    // If no matching data, return 404
+    if(gid_arr.length == 0){
+        res.status(404);
+        res.send('Not Found.');
+    }
+    else{
+        res.send(gid_arr);
+    }
 
-            // If no matching data, return 404
-            res.status(404);
-            res.send('Not Found.');
-        });
-    });
 });
 
 // GET /groups/gid
@@ -404,27 +357,16 @@ app.get('/users/:id/groups', function(req,res){
     }
 	*/
 app.get('/groups/:id', function(req,res){
-    var obj;
-
-    // read the file related to the API
-    fs.readFile(GROUPS, 'utf8', function (err, data) {
-      if (err){
-        res.send("FILE NOT FOUND");
-        throw err;
-      } 
-      obj = JSON.parse(data);
-      
-      for(var i = 0; i < obj.length; i++){
-        if(JSON.stringify(obj[i].gid) == req.params.id){
-           res.send(obj[i]);
-           return;
+    for(var i = 0; i < obj_group.length; i++){
+        if((obj_group[i].gid) == req.params.id){
+            res.send(obj_group[i]);
+            return;
         }
-      }
+    }
 
-      // If no matching data, return 404
-      res.status(404);
-      res.send('Not Found.');
-    });
+    // If no matching data, return 404
+    res.status(404);
+    res.send('Not Found.');
 });
 
 

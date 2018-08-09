@@ -33,14 +33,6 @@ AIM : To develop search API service for user and groups data from local files.
 
 Note : All of the above instructions are related to Windows OS.
 
-## Test using POSTMAN.
-1. Save all the test APIs to a collection in POSTMAN by saving the API's request and responses.
-2. Export / Download the collection as a .json file.
-3. NEWMAN plugin : Used to run the exported collection.json.
-4. Newman installation with "npm install -g newman".
-5. Command to run the collection.json is "newman run collection.json".
-6. The test cases are run and the result is then displayed.
-
 ## Security:
 1. The service could be installed with an SSL certificate to implement HTTPS protocol.
 2. The headers of the service could consist of meta data such as a unique ID and a TOKEN for additional layer security.
